@@ -1,0 +1,72 @@
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin corners ($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -khtml-border-radius: $radius;
+}
+
+body {
+    background: tomato;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 30px auto;
+    color: black;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+
+#seconds,
+#tens,
+#min {
+    font-size: 2em;
+}
+
+#laps {
+    max-width: 128px;
+    text-align: left;
+    padding-bottom: 20px;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+button {
+    background: tomato;
+    color: black;
+    border: solid 1px black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 180px;
+    margin: 10px;
+    outline: none;
+}
+
+button:hover {
+    background: black;
+    border: solid 1px black;
+    color: tomato;
+}
