@@ -84,9 +84,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
                 //     }
                 // });
                 for (var i = 0; i < tabfinal.length; i++) {
-
+                    console.log(tabfinal[i][2]);
                     if (hours == tabfinal[i][0] && minutes == tabfinal[i][1] && seconds == 00) {
-                        alert(text1);
+                        alert(tabfinal[i][2]);
 
                     }
                 }
