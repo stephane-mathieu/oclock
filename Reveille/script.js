@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", (e) => {
 
-
         var btn = document.getElementById('send');
         var lapCounter = 1;
         var time = document.querySelector("#laps");
@@ -20,35 +19,35 @@ document.addEventListener("DOMContentLoaded", (e) => {
             text1 = document.getElementById('text1').value;
             li = document.querySelector("li");
 
-            let mheur = 0;
-            let mminute = 0;
+            // let mheur = 0;
+            // let mminute = 0;
 
-            mheur = parseInt(heur, 10);
-            mminute = parseInt(minute, 10);
+            // mheur = parseInt(heur, 10);
+            // mminute = parseInt(minute, 10);
 
-            let datetest = new Date(2022, 0, 1, mheur, mminute, 0);
+            let datetest = new Date(2022, 0, 1, heur, minute, 0);
             let testheur = datetest.getHours();
             let testmin = datetest.getMinutes();
             let testsec = datetest.getSeconds();
-
-            console.log(datetest);
+            // console.log(datetest);
             // console.log(Date.now());
             testmin = testmin < 10 ? "0" + testmin : testmin;
             testheur = testheur < 10 ? "0" + testheur : testheur;
 
-            lastmin = parseInt(testmin, 10);
-            lastheur = parseInt(testheur, 10);
-            console.log(testheur);
-            console.log(testmin);
+            // lastmin = parseInt(testmin, 10);
+            // lastheur = parseInt(testheur, 10);
+            // console.log(testheur);
+            // console.log(testmin);
 
-            time.innerHTML += '<li>' + heur + ' : ' + minute + '<label for="scales"> : Reveille' + lapCounter + '</label></li>';
-            tab = [lastheur, lastmin, text1];
+            time.innerHTML += '<li>' + testheur + ' : ' + testmin + '<label for="scales"> : Reveille' + lapCounter + '</label></li>';
+            tab = [testheur, testmin, text1];
             tabfinal.push(tab);
-            console.log(tabfinal)
+            // console.log(tabfinal)
 
-            // tab.forEach(element => console.log(element)
+            // tabfinal.forEach(element => console.log(element[1])
 
             // );
+
 
             lapCounter++;
 
@@ -84,6 +83,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
                 //     }
                 // });
+                for (var i = 0; i < tabfinal.length; i++) {
+
+                    if (hours == tabfinal[i][0] && minutes == tabfinal[i][1] && seconds == 00) {
+                        alert(text1);
+
+                    }
+                }
 
 
             });
